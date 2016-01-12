@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "people_and_car_detector")
+set(people_and_car_detector_MAINTAINER "angus <angus@todo.todo>")
+set(people_and_car_detector_DEPRECATED "")
+set(people_and_car_detector_VERSION "0.0.0")
+set(people_and_car_detector_BUILD_DEPENDS "roscpp" "rospy" "std_msgs" "opencv2" "cv_bridge" "image_transport")
+set(people_and_car_detector_RUN_DEPENDS "opencv2" "cv_bridge" "image_transport" "roscpp" "rospy" "std_msgs")
+set(people_and_car_detector_BUILDTOOL_DEPENDS "catkin")

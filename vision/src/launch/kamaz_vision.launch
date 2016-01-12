@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<launch>
+  <param name="face_cascade_name" value="$(find people_and_car_detector)/config/haarcascade_frontalface_alt.xml" />
+  <param name="image_topic" value="/usb_cam/image_raw" />
+  <node name="people_detector" pkg="people_and_car_detector" type="people_detector"  output="screen">
+  </node>
+
+   <node pkg="people_and_car_detector" type="vision_control.py" name="vision_control" output="screen">
+   </node>
+
+        <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen" >
+    		<param name="video_device" value="/dev/video0" />
+   		<param name="image_width" value="640" />
+    		<param name="image_height" value="480" />
+   		<param name="pixel_format" value="yuyv" />
+   		<param name="camera_frame_id" value="usb_cam" />
+    		<param name="io_method" value="mmap"/>
+ 	</node>		
+
+        <node name="people_detector_view" pkg="image_view" type="image_view" args="image:=/image"/>
+
+        <node name="car_detector_view" pkg="image_view" type="image_view" args="image:=/image2"/>
+
+        <node name="car_detector" pkg="people_and_car_detector" type="imgfilter.py">
+		<param name="resultImage" value="/image2"/>
+		<param name="sourceImage" value="/usb_cam/image_raw"/>
+	</node>	
+
+</launch>
+

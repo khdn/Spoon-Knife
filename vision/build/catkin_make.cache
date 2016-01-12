@@ -1,0 +1,2 @@
+.
+-DCATKIN_DEVEL_PREFIX=/home/z/kamaz_vision/devel -DCMAKE_INSTALL_PREFIX=/home/z/kamaz_vision/install -G Unix Makefiles

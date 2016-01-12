@@ -1,0 +1,8 @@
+prefix=/home/z/kamaz_vision/install
+
+Name: people_and_car_detector
+Description: Description of people_and_car_detector
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/z/kamaz_vision/install/lib 
+Requires: 

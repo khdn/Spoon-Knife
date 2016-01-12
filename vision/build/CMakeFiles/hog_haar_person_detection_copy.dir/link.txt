@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/hog_haar_person_detection_copy.dir/src/hog_haar_person_detection_copy.cpp.o  -o /home/z/kamaz_vision/devel/lib/hog_haar_person_detection/hog_haar_person_detection_copy -rdynamic 
